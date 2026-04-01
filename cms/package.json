@@ -1,0 +1,35 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_OPTIONS=--no-deprecation next dev",
+    "build": "cross-env NODE_OPTIONS=--no-deprecation next build",
+    "start": "cross-env NODE_OPTIONS=--no-deprecation next start",
+    "payload": "cross-env NODE_OPTIONS=--no-deprecation payload",
+    "generate:types": "payload generate:types",
+    "generate:importmap": "payload generate:importmap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@payloadcms/db-mongodb": "3.66.0",
+    "@payloadcms/next": "3.66.0",
+    "@payloadcms/richtext-lexical": "3.66.0",
+    "@payloadcms/ui": "3.66.0",
+    "cross-env": "^10.1.0",
+    "graphql": "^16.12.0",
+    "next": "15.4.11",
+    "payload": "3.66.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  }
+}
