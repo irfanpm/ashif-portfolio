@@ -61,8 +61,8 @@ export const NAV_LINKS = [
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
-  { id: 1, title: "Creative Work", category: "Poster Design", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.16%20PM%20(1).jpeg", span: "col-span-1 row-span-2" },
-  { id: 2, title: "Social Media Campaign", category: "Digital", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.16%20PM.jpeg", span: "col-span-1 row-span-1" },
-  { id: 3, title: "Event Promotion", category: "Print Media", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.17%20PM%20(1).jpeg", span: "col-span-1 row-span-1" },
-  { id: 4, title: "Brand Aesthetics", category: "Typography", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.17%20PM.jpeg", span: "col-span-2 row-span-2" },
+  { id: 1, title: "Creative Work", category: "Poster Design", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.16%20PM%20(1).jpeg", span: "md:col-span-1 md:row-span-2" },
+  { id: 2, title: "Social Media Campaign", category: "Digital", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.16%20PM.jpeg", span: "md:col-span-1 md:row-span-1" },
+  { id: 3, title: "Event Promotion", category: "Print Media", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.17%20PM%20(1).jpeg", span: "md:col-span-1 md:row-span-1" },
+  { id: 4, title: "Brand Aesthetics", category: "Typography", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.17%20PM.jpeg", span: "md:col-span-2 md:row-span-2" },
 ];

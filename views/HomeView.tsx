@@ -41,12 +41,7 @@ const HomeView: React.FC<HomeViewProps> = ({ setPage }) => {
           >
             VIEW WORK <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <button 
-            onClick={() => setPage('ai-lab')}
-            className="px-10 py-5 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-800 rounded-2xl font-black text-sm flex items-center gap-3 hover:scale-[1.02] transition-all active:scale-95 shadow-sm"
-          >
-            AI LAB <Sparkles size={16} />
-          </button>
+        
         </div>
       </div>
     </div>
