@@ -139,10 +139,15 @@ const App: React.FC = () => {
                   Combining business logic with creative excellence to deliver high-performance digital assets.
                 </p>
                 <div className="flex gap-4">
-                  {[Linkedin, Instagram, Github, Facebook].map((Icon, i) => (
-                    <button key={i} className="w-12 h-12 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all shadow-sm">
+                  {[
+                    { Icon: Linkedin, href: "#" },
+                    { Icon: Instagram, href: "https://www.instagram.com/__ashiffff?igsh=dmJwYm52M3Rza3J0" },
+                    // { Icon: Github, href: "#" },
+                    { Icon: Facebook, href: "https://www.facebook.com/share/18WhVidBDp/" }
+                  ].map(({Icon, href}, i) => (
+                    <a key={i} href={href} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all shadow-sm">
                       <Icon size={20} />
-                    </button>
+                    </a>
                   ))}
                 </div>
               </div>

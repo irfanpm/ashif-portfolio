@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, ArrowRight, Linkedin, Instagram, Github, Send, Check } from 'lucide-react';
+import { Mail, Phone, ArrowRight, Linkedin, Instagram, Github, Facebook, Send, Check } from 'lucide-react';
 import { SectionHeader } from '../components/SectionHeader';
 import { PROFILE_DATA } from '../constants';
 
@@ -56,10 +56,15 @@ const ContactView: React.FC = () => {
           <div className="pt-10 border-t border-zinc-100 dark:border-zinc-800">
             <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-8">Social Channels</p>
             <div className="flex gap-4">
-              {[Linkedin, Instagram, Github].map((Icon, i) => (
-                <button key={i} className="w-12 h-12 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all shadow-sm">
+              {[
+                { Icon: Linkedin, href: "#" },
+                { Icon: Instagram, href: "https://www.instagram.com/__ashiffff?igsh=dmJwYm52M3Rza3J0" },
+                { Icon: Github, href: "#" },
+                { Icon: Facebook, href: "https://www.facebook.com/share/18WhVidBDp/" }
+              ].map(({Icon, href}, i) => (
+                <a key={i} href={href} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-2xl border border-zinc-200 dark:border-zinc-800 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all shadow-sm">
                   <Icon size={20} />
-                </button>
+                </a>
               ))}
             </div>
           </div>
