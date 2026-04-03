@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-export type PageType = 'home' | 'about' | 'skills' | 'projects' | 'experience' | 'ai-lab' | 'contact';
+export type PageType = 'home' | 'about' | 'skills' | 'projects' | 'experience' | 'ai-lab' | 'contact' | 'gallery';
 
 export interface SkillGroup {
   name: string;
@@ -16,6 +16,14 @@ export interface Project {
   category: string;
   desc: string;
   image: string;
+}
+
+export interface GalleryImage {
+  id: number;
+  title: string;
+  category: string;
+  image: string;
+  span?: string;
 }
 
 export interface Experience {

@@ -11,7 +11,7 @@ const AboutView: React.FC = () => {
         <div className="relative group">
           <div className="aspect-[4/5] bg-zinc-100 dark:bg-zinc-900 rounded-[2.5rem] overflow-hidden shadow-2xl transition-all duration-700 group-hover:shadow-blue-500/5">
             <img 
-              src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800" 
+              src="/ChatGPT Image Apr 3, 2026, 03_31_49 PM.png" 
               alt="Profile" 
               className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 scale-105 group-hover:scale-100" 
             />

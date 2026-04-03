@@ -10,6 +10,7 @@ import HomeView from './views/HomeView';
 import AboutView from './views/AboutView';
 import SkillsView from './views/SkillsView';
 import ProjectsView from './views/ProjectsView';
+import GalleryView from './views/GalleryView';
 import ExperienceView from './views/ExperienceView';
 import AILabView from './views/AILabView';
 import ContactView from './views/ContactView';
@@ -113,8 +114,9 @@ const App: React.FC = () => {
           {page === 'about' && <AboutView />}
           {page === 'skills' && <SkillsView />}
           {page === 'projects' && <ProjectsView />}
+          {page === 'gallery' && <GalleryView />}
           {page === 'experience' && <ExperienceView />}
-          {page === 'ai-lab' && <AILabView />}
+          {/* {page === 'ai-lab' && <AILabView />} */}
           {page === 'contact' && <ContactView />}
         </main>
 

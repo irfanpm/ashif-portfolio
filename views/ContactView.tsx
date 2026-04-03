@@ -6,11 +6,21 @@ import { PROFILE_DATA } from '../constants';
 
 const ContactView: React.FC = () => {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent'>('idle');
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    setTimeout(() => setStatus('sent'), 1500);
+    
+    // Simulate slight processing delay for UX, then open email client
+    setTimeout(() => {
+      const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
+      const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nProject Brief:\n${formData.message}`);
+      window.location.href = `mailto:${PROFILE_DATA.email}?subject=${subject}&body=${body}`;
+      
+      setStatus('sent');
+      setFormData({ name: '', email: '', message: '' });
+    }, 800);
   };
 
   return (
@@ -76,16 +86,36 @@ const ContactView: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest ml-4 text-gray-400">Full Name</label>
-                <input required type="text" className="w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-[1.25rem] px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium" placeholder="John Doe" />
+                <input 
+                  required 
+                  type="text" 
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  className="w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-[1.25rem] px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium" 
+                  placeholder="John Doe" 
+                />
               </div>
               <div className="space-y-2">
                 <label className="text-[10px] font-black uppercase tracking-widest ml-4 text-gray-400">Email Address</label>
-                <input required type="email" className="w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-[1.25rem] px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium" placeholder="john@example.com" />
+                <input 
+                  required 
+                  type="email" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  className="w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-[1.25rem] px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all font-medium" 
+                  placeholder="john@example.com" 
+                />
               </div>
             </div>
             <div className="space-y-2 mb-10">
               <label className="text-[10px] font-black uppercase tracking-widest ml-4 text-gray-400">Project Brief</label>
-              <textarea required rows={5} className="w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-[1.5rem] px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none font-medium" placeholder="Tell me about your brand needs..."></textarea>
+              <textarea 
+                required 
+                rows={5} 
+                value={formData.message}
+                onChange={(e) => setFormData({...formData, message: e.target.value})}
+                className="w-full bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-[1.5rem] px-6 py-4 outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none font-medium" 
+                placeholder="Tell me about your brand needs..."></textarea>
             </div>
             <button 
               type="submit"
