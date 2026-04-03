@@ -22,8 +22,9 @@ const App: React.FC = () => {
 
   useEffect(() => {
     // Check system preference
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches || document.documentElement.classList.contains('dark')) {
       setDarkMode(true);
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
@@ -31,10 +32,18 @@ const App: React.FC = () => {
     window.scrollTo(0, 0);
   }, [page]);
 
-  const toggleDarkMode = () => setDarkMode(!darkMode);
+  const toggleDarkMode = () => {
+    const isDark = !darkMode;
+    setDarkMode(isDark);
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
 
   return (
-    <div className={darkMode ? 'dark' : ''}>
+    <div>
       <div className="min-h-screen bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 transition-colors duration-500 flex flex-col">
         
         {/* Navigation */}
