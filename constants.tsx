@@ -61,6 +61,15 @@ export const NAV_LINKS = [
 ];
 
 export const GALLERY_IMAGES: GalleryImage[] = [
+  { id: 5, title: "Stage 5 — The New Cabin", category: "Brand Campaigns", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 1.10.3118 PM.jpeg") },
+  { id: 6, title: "Every Future Begins With Guidance", category: "Festive Creatives", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 1.10.36 PM.jpeg") },
+  { id: 7, title: "Dubai Summit — Binu Jacob", category: "Event Posters", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 111.10.38 PM.jpeg") },
+  { id: 8, title: "Monsoon Sale", category: "Brand Campaigns", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 1.10.3711 PM.jpeg") },
+  { id: 9, title: "Maha Navami — Divine Strength", category: "Festive Creatives", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 1.1110.38 PM.jpeg") },
+  { id: 10, title: "Onam — A Warm Welcome", category: "Festive Creatives", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 11.10.36 PM.jpeg") },
+  { id: 11, title: "Gandhi Jayanti", category: "Festive Creatives", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 122.10.39 PM.jpeg") },
+  { id: 12, title: "Independence Day — Power to Progress", category: "Festive Creatives", image: "/work/" + encodeURIComponent("WhatsApp Image11 2026-10-31 at 1.10.36 PM.jpeg") },
+  { id: 13, title: "Milad-un-Nabi — Peace & Blessings", category: "Festive Creatives", image: "/work/" + encodeURIComponent("WhatsApp Image 2026-10-31 at 1.10.37 PM.jpeg") },
   { id: 1, title: "Creative Work", category: "Poster Design", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.16%20PM%20(1).jpeg", span: "md:col-span-1 md:row-span-2" },
   { id: 2, title: "Social Media Campaign", category: "Digital", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.16%20PM.jpeg", span: "md:col-span-1 md:row-span-1" },
   { id: 3, title: "Event Promotion", category: "Print Media", image: "/work/WhatsApp%20Image%202026-04-03%20at%203.15.17%20PM%20(1).jpeg", span: "md:col-span-1 md:row-span-1" },
